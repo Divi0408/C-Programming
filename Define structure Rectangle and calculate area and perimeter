@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+struct Rectangle
+{
+    float length;
+    float breadth;
+};
+
+int main()
+{
+    struct Rectangle r;
+    float area, perimeter;
+
+    printf("Enter length: ");
+    scanf("%f", &r.length);
+
+    printf("Enter breadth: ");
+    scanf("%f", &r.breadth);
+
+    area = r.length * r.breadth;
+    perimeter = 2 * (r.length + r.breadth);
+
+    printf("Area = %.2f\n", area);
+    printf("Perimeter = %.2f\n", perimeter);
+
+    return 0;
+}

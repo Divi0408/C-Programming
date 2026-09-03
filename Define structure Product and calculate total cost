@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+struct Product
+{
+    int id;
+    char name[50];
+    int quantity;
+    float unitPrice;
+};
+
+int main()
+{
+    struct Product p;
+    float total;
+
+    printf("Enter Product ID: ");
+    scanf("%d", &p.id);
+
+    printf("Enter Product Name: ");
+    scanf("%s", p.name);
+
+    printf("Enter Quantity: ");
+    scanf("%d", &p.quantity);
+
+    printf("Enter Unit Price: ");
+    scanf("%f", &p.unitPrice);
+
+    total = p.quantity * p.unitPrice;
+
+    printf("\nProduct Details\n");
+    printf("ID = %d\n", p.id);
+    printf("Name = %s\n", p.name);
+    printf("Quantity = %d\n", p.quantity);
+    printf("Unit Price = %.2f\n", p.unitPrice);
+    printf("Total Cost = %.2f\n", total);
+
+    return 0;
+}

@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int units;
+    float bill;
+
+    printf("Enter units consumed: ");
+    scanf("%d", &units);
+
+    if(units > 400)
+        bill = units * 4.00;
+    else if(units >= 300)
+        bill = units * 3.00;
+    else if(units >= 200)
+        bill = units * 2.50;
+    else if(units >= 100)
+        bill = units * 1.50;
+    else
+        bill = units * 0.50;
+
+    printf("Electricity Bill = Rs. %.2f", bill);
+
+    return 0;
+}
